@@ -1,0 +1,38 @@
+@mixin form {
+  margin: auto;
+  height: 2.5rem;
+  width: 100%;
+  @media (min-width: $sm-min) {
+    width: 80%;
+  }
+}
+
+@mixin input {
+  padding-left: 0.8rem;
+  border: 1px solid #999;
+  border-radius: 0.2rem;
+  &:focus {
+    outline: 0;
+    border-color: var(--color-bright-blue);
+  }
+  &::placeholder {
+    color: #d1d1d1;
+  }
+  @media (max-width: $sm-max) {
+    margin-bottom: 1rem;
+  }
+}
+
+@mixin button {
+  background: var(--color-bright-blue);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.3);
+  &:hover {
+    background: var(--color-bright-blue-o);
+  }
+}
